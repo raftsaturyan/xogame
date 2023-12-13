@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: cursive;
+}
+
+body{
+    height: 100vh;
+    background-color: #565685;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selection{
+    padding: 50px 100px;
+    background: whitesmoke;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.selection h3{
+    font-size: 3rem;
+    color: #820000;
+    font-weight: 700;
+    font-variant: small-caps;
+}
+
+.selection p{
+    margin-top: 10px;
+    font-size: 3rem;
+    color: #4E6C50;
+    font-variant: small-caps;
+}
+
+.selection .players{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.selection .players .player{
+    color: #820000;
+    border: 2px solid #820000;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin: 0 4px;
+    width: 6rem;
+    height: 4rem;
+    transition: .4s ease;
+
+}
+.selection .players .player:hover{
+    color: whitesmoke;
+    background-color: #820000;
+}
+
+.fadeOut{
+    animation: hide .3s linear alternate;
+}
+
+@keyframes hide {
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.fadeIn{
+    animation: show .3s linear alternate;
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.play-board{
+    display: none;
+    padding: 50px;
+    border-radius: 8px;
+    background: whitesmoke;
+    text-align: center;
+
+}
+
+table td{
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 8px;
+    border: 2px solid whitesmoke;
+    background: #4E6C50;
+    cursor: pointer;
+    transition: .4s linear;
+    text-align: center;
+}
+
+.reset{
+    cursor: pointer;
+    padding: 8px 18px;
+    margin-top: 30px;
+    color: #820000;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border: 3px solid #820000;
+    transition: .4s;
+}
+
+.reset:hover{
+    color: whitesmoke;
+    background: #820000;
+}
+
+.winner{
+    display: none;
+    padding: 40px 50px;
+    border-radius: 8px;
+    background: whitesmoke;
+    text-align: center;
+
+}
+
+.winner h3{
+    font-size: 30px;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+
+
+
+
+
+
+.menu {
+    --menu-height: 40px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+  .menu ul {
+    list-style: none;
+    padding: 16px;
+    margin: 0;
+  }
+  .menu ul li, .menu ul li a {
+    opacity: 0.8;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 200ms;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 700;
+  }
+  .menu ul li:hover, .menu ul li a:hover {
+    opacity: 1;
+  }
+  .menu ul li a, .menu ul li a a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .menu ul li {
+    padding-right: 36px;
+  }
+  .menu ul li::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #FFA500;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menu ul .link::before {
+    padding-right: 0;
+    display: none;
+  }
+  .menu > ul {
+    display: flex;
+    height: var(--menu-height);
+    align-items: center;
+    background-color: #262652;
+  }
+  .menu > ul li {
+    position: relative;
+    margin: 0 8px;
+  }
+  .menu > ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    padding: 0;
+    min-width: 160px;
+    background-color: #333;
+    position: absolute;
+    top: calc(var(--menu-height) + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 200ms;
+    transition-delay: 200ms;
+  }
+  .menu > ul li ul li {
+    margin: 0;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 30px;
+    padding-right: 40px;
+  }
+  .menu > ul li ul li::before {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #FFA500;
+  }
+  .menu > ul li ul li ul {
+    top: -2%;
+    left: 100%;
+    transform: translate(0);
+  }
+  .menu > ul li ul li:hover {
+    background-color: #000000;
+  }
+  .menu > ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0ms;
+  }

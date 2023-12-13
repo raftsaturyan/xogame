@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="computer.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+
+    <div  class="menu">
+        <ul>  
+          <li class="link"><a href="main.html">Home</a></li>
+          <li class="link"><a href="about.html">About</a></li>
+          <li class="link"><a href="contact.html">Contact</a></li>
+          <li>
+            PLAY
+            <ul>
+              <li class="link">
+                <a href="computer.html">VS computer</a>
+              </li>
+              <li class="link">
+                <a href="friend.html">VS your friend</a>
+              </li>
+              
+        </ul>
+     </div>
+
+    <div class="selection">
+        <h3>Tic Tac Toe</h3>
+        <p>Ընտրիր՝</p>
+        <div class="players">
+            <button class="player" onclick="playerSelect('X')">X</button>
+            <button class="player" onclick="playerSelect('O')">O</button>
+        </div>
+    </div>
+
+    <div class="play-board">
+        <table>
+            <tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+            </tr>
+            <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+            </tr>
+        </table>
+
+        <button class="reset" onclick="startGame()">Սկզբից</button>
+
+    </div>
+
+        <div class="winner">
+
+            <h3></h3>
+            <button class="reset" onclick="startGame()"> Խաղալ նորից</button>
+            
+            </div>
+<script src="computer.js"></script>
+
+</body>
+</html>
+</body>
+</html>
